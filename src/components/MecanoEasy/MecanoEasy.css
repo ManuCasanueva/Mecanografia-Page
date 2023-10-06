@@ -10,20 +10,18 @@
   }
   
 
-  .input {
-    background-color: gray;
-    color: rgb(0, 0, 0);
-    
-  }
+ 
   .strong{
     position:relative;
     background-color: rgba(128, 128, 128, 0.534);
+    padding: 2px;
     width: auto;
     border-radius: 10px;
     font-weight: normal;
   }
   .bad{
     background-color: rgba(255, 3, 3, 0.753);
+    padding: 2px;
     width: auto;
     border-radius: 10px;
     font-weight: normal;
@@ -38,22 +36,74 @@
   }
 
   .word-display {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Aumenta el número de columnas */
-    grid-gap: 5px; /* Aumenta el espacio entre las palabras */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las palabras se envuelvan automáticamente cuando no caben en una línea */
+    justify-content: center; /* Centra las palabras horizontalmente */
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.8em; /* Reduce el tamaño de fuente */
+    font-size: 1.9em; /* Reduce el tamaño de fuente */
     background-color: white;
-    max-width: 1100px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar horizontalmente en el contenedor padre */
+    width: 1100px;
+    white-space: nowrap; /* Evita el salto de línea */
+    height: 100px; 
+    /* Centrar horizontalmente en el contenedor padre */
     text-align: center; /* Alineación de texto centrado */
-    overflow: hidden; /* Esto asegura que el contenido no se desborde */
 }
 
+  
+  .word-display span {
+    margin: 2px; /* Espacio entre las palabras */
+  }
+
+  .input {
+    background-color: #ffffff;
+    color: black;
+    max-width: 190px;
+    height: 20px;
+    padding: 10px;
+    /* text-align: center; */
+    
+    border-radius: 5px;
+   
+  }
+  
+  .input:focus {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    outline-color: rgba(0, 255, 255, 0.507);
+    box-shadow: -3px -3px 15px rgba(0, 255, 255, 0.514);
+    transition: .1s;
+    transition-property: box-shadow;
+  }
+
+  .containerInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .countdown {
+    border-radius: 10px;
+    background-color: #3c4d5c;
+    
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .refresh{
+    width: 22px;
+    height: 22px;
+    background-color: #3c4d5c;
+  }
+
+  .boton{
+    width: fit-content;
+    height: fit-content;
+    background-color: #3c4d5c;
+  }
 
 
  
