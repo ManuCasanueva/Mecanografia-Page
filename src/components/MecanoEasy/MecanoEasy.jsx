@@ -101,24 +101,17 @@ function MecanoEasy() {
     <div>
 <div className="word-display">
   {shuffledWords.slice(0, 24).map((word, index) => (
-    <span key={index} className={wordColors[index]}>
+    <span key={index}>
       {index === wordIndex ? (
-        typedWord === "" ? (
-          <strong className="strong">{word}</strong>
-        ) : typedWord === word ? (
-          <strong className="strong">{word}</strong>
-        ) : (
-          <strong className="bad">{word}</strong>
-        )
+        <strong className={typedWord === word.slice(0, typedWord.length) ? "strong" : "bad"}>
+          {word}
+        </strong>
       ) : (
-        word
+        <span  className={wordColors[index]}>{word}</span>
       )}
-      &nbsp;
     </span>
   ))}
 </div>
-
-
 
       <br></br>
       <br></br>

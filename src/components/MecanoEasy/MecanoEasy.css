@@ -16,6 +16,7 @@
     
   }
   .strong{
+    position:relative;
     background-color: rgba(128, 128, 128, 0.534);
     width: auto;
     border-radius: 10px;
@@ -30,12 +31,10 @@
   
   .correct {
     color: green;
-    font-weight: bold;
   }
   
   .incorrect {
     color: red;
-    font-weight: bold;
   }
 
   .word-display {
